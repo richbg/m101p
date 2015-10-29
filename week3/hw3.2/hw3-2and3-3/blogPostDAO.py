@@ -54,7 +54,7 @@ class BlogPostDAO:
         # now insert the post
         try:
             # XXX HW 3.2 Work Here to insert the post
-            self.posts.insert(post, j=True)
+            self.posts.insert(post)
             print "Inserting the post"
         except:
             print "Error inserting post"
