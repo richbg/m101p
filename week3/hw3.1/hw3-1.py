@@ -12,6 +12,7 @@ connection = pymongo.MongoClient("mongodb://localhost")
 db = connection.school
 students = db.students
 
+
 def find():
     print("finding all students")
 
