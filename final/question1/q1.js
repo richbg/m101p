@@ -1,10 +1,10 @@
 // query
-var count = db.message.find({"headers.From": 'andrew.fastow@enron.com', "headers.To": 'jeff.skilling@enron.com'}).count();
+var count = db.messages.find({"headers.From": 'andrew.fastow@enron.com', "headers.To": 'jeff.skilling@enron.com'}).count();
 print (count);
 
 
 // aggregate method 
-db.message.aggregate([
+db.messages.aggregate([
    {$match: 
       {"headers.From": "andrew.fastow@enron.com"}}, 
    {$unwind: "$headers.To"}, 
